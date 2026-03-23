@@ -9,22 +9,32 @@ k# CLAUDE.md — Контекст проекта для агента
 | Модуль | Статус |
 |--------|--------|
 | intent | done |
-| API-контракт | todo |
-| README | todo |
+| API-контракт | done |
+| README | done |
 | Gherkin-тесты | todo |
 | Go-сервер | todo |
 
 ## Следующий шаг
 
-Шаг 1 — OpenAPI-спека и README. Ветка: `feat/api-contract`.
+Шаг 2 — Компонентные тесты (Gherkin). Ветка: `feat/gherkin-tests`.
+
+**Ожидает:** мерж PR `feat/api-contract` в main.
 
 ## Принятые решения
 
-- ...
+### API-контракт (Шаг 1)
+
+- **OpenAPI 3.0.3** — более широкая поддержка инструментами, чем 3.1
+- **POST вместо PUT** для завершения фаз (`/registrations/{id}/attestation`, `/sessions/{id}/assertion`) — семантически корректнее для продолжения процесса
+- **base64url** для всех бинарных данных — стандарт WebAuthn (RFC 4648 §5)
+- **JWT алгоритм Ed25519** — быстрее, меньше размер ключей и подписи, детерминированная подпись
+- **Access token TTL 15 мин, refresh token TTL 30 дней** — компромисс между безопасностью и UX
+- **DELETE /sessions/current** вместо /sessions/{id} — упрощение для клиента (user_id извлекается из JWT)
+- **Единый формат error response** — `{code, message, details[]}` с HTTP-кодами: 400 (bad request), 409 (conflict), 422 (validation), 404 (not found), 401 (unauthorized)
 
 ## Открытые вопросы
 
-- ...
+Нет.
 
 ## Сценарий первой сессии
 
