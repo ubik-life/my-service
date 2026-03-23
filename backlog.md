@@ -2,12 +2,6 @@
 
 ## Todo
 
-### Шаг 1 — API-контракт и README
-- [ ] Написать OpenAPI 3.x спецификацию (`api-specification/openapi.yaml`)
-- [ ] Создать README (структура постановки задачи)
-- [ ] Зафиксировать в `devlog/01-api-contract.md`
-- [ ] Merge в main
-
 ### Шаг 2 — Компонентные тесты (Gherkin)
 - [ ] Описать сценарии для каждого эндпоинта
 - [ ] Разместить в `/component-tests`
@@ -25,3 +19,8 @@
 ## Done
 
 - [x] Шаг 0 — Репозиторий, AGENTS.md, CLAUDE.md, intent
+- [x] Шаг 1 — API-контракт и README
+  - [x] OpenAPI 3.0 спецификация (`api-specification/openapi.yaml`)
+  - [x] README (постановка задачи, архитектура, модули)
+  - [x] Devlog (`devlog/01-api-contract.md`)
+  - [ ] Merge в main (ожидает PR)
