@@ -1,9 +1,8 @@
-# CLAUDE.md — Контекст проекта для агента
+k# CLAUDE.md — Контекст проекта для агента
 
 ## Проект
 
-<!-- TODO: одна строка о сервисе -->
-**Название** — краткое описание. Стек: ...
+**Passkey Demo API** — Go-сервис авторизации без паролей. Стек: Go + WebAuthn + JWT + SQLite.
 
 ## Статус модулей
 
@@ -21,12 +20,10 @@
 
 ## Принятые решения
 
-<!-- TODO: заполни по ходу разработки -->
 - ...
 
 ## Открытые вопросы
 
-<!-- TODO: блокеры и вопросы -->
 - ...
 
 ## Сценарий первой сессии
@@ -44,16 +41,7 @@
 - Обновлять `README.md` если изменились API, структура репо, стек, способ запуска.
 
 ### Флоу завершения шага
-
-```
-1. git checkout -b feat/<name>
-2. git add <files>
-3. git commit -m "type(scope): description"
-4. git push -u origin feat/<name>
-5. PR → merge (делает разработчик)
-6. git checkout main && git pull origin main
-7. git checkout -b feat/<next-name>
-```
+1. git checkout -b feat/ 2. git add 3. git commit -m "type(scope): description" 4. git push -u origin feat/ 5. PR → merge (делает разработчик) 6. git checkout main && git pull origin main 7. git checkout -b feat/
 
 ## Фрейм работы с агентом
 
